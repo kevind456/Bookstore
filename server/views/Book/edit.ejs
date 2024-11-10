@@ -1,0 +1,29 @@
+<%- include ../Partials/header.ejs%>
+<%- include ../Partials/main_nav.ejs%>
+<!--Content for the edit Operation-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="titleTextField">Book Title</label>
+                    <input type="text" class="form-control" id="titleTextField" placeholder="Enter the Book Title" name="Title" value="<%= Book.Title %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="authorTextField">Book Author</label>
+                    <input type="text" class="form-control" id="authorTextField" placeholder="Enter the Book Author" name="Author" value="<%= Book.Author %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="genreTextField">Book Genre</label>
+                    <input type="text" class="form-control" id="genreTextField" placeholder="Enter the Published year" name="Genre" value="<%= Book.Genre %>" required>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit
+                <i class="fas fa-edit"></i></button>  
+                <button class="btn btn-warning" type="submit">Cancel
+                    <i class="fas fa-undo"></i></button>    
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ../Partials/footer.ejs%>
