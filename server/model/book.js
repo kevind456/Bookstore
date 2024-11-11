@@ -5,7 +5,8 @@ const mongoose = require("mongoose");
 let bookModel = mongoose.Schema({
     Title: String,
     Author: String,
-    Genre: String
+    Genre: String,
+    PageTracker: Number
 },
 {
     collection:"books"

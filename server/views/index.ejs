@@ -1,7 +1,25 @@
-<%- include Partials/header.ejs%>
-<%- include Partials/main_nav.ejs%>
-    <!--Main content-->
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>To view books click on books on the navbar</p>
-<%- include Partials/footer.ejs%>
+<%- include Partials/header.ejs %>
+<%- include Partials/main_nav.ejs %>
+
+<div class="container bg-white mt-5 p-4">
+  <h1 class="text-center"><%= title %></h1> 
+
+  <!-- Hero Section -->
+  <div class="jumbotron text-center bg-white p-5">
+    <p class="lead">Welcome to the <%= title %> Page!</p>
+    <p>Track and manage your book collection effortlessly.</p>
+    <a href="/bookslist/add" class="btn btn-primary" role="button">
+    <i class="fas fa-plus-circle"></i> Add Book
+</a>
+
+  </div>
+
+  <!-- Additional Info Section -->
+  <div class="row mt-4">
+    <div class="col text-center">
+      <p>To view books, click on "Books" in the navbar.</p>
+    </div>
+  </div>
+</div>
+
+<%- include Partials/footer.ejs %>

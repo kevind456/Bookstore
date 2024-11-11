@@ -14,16 +14,18 @@
                     <th class="text-center col-2">Title</th>
                     <th class="text-center col-2">Author</th>
                     <th class="text-center col-1">Genre</th>
+                    <th class="text-center col-1">Page</th>
                 </tr>
                 <% for(let count=0;count<BookList.length;count++) { %>
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= BookList[count].Title %></td>
                         <td class="text-center col-2"><%= BookList[count].Author %></td>
                         <td class="text-center col-1"><%=BookList[count].Genre%></td>
+                        <td class="text-center col-1"><%= BookList[count].PageTracker%></td>
                         <td class="text-center col-1">
                             <a href="/bookslist/edit/<%= BookList[count]._id%>"
                                 class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i>Edit
+                            <i class="fas fa-pencil-alt"></i>edit
                         </a>
                         </td>
                         <td class="text-center col-1">

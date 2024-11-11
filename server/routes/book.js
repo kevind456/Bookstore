@@ -49,7 +49,8 @@ router.post('/add',async(req,res,next)=>{
         let newBook = Book({
             "Title":req.body.Title,
             "Author":req.body.Author,
-            "Genre":req.body.Genre
+            "Genre":req.body.Genre,
+            "PageTracker": req.body.PageTracker
         });
         Book.create(newBook).then(()=>{
             res.redirect('/bookslist');
@@ -89,7 +90,8 @@ router.post('/edit/:id',async(req,res,next)=>{
             "_id":id,
             "Title":req.body.Title,
             "Author":req.body.Author,
-            "Genre":req.body.Genre
+            "Genre":req.body.Genre,
+            "PageTracker": req.body.PageTracker
         });
         Book.findByIdAndUpdate(id,updatedBook).then(()=>{
             res.redirect('/bookslist')
